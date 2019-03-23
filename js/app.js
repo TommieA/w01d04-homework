@@ -5,9 +5,8 @@
         and gives a value back to where it was called from.
     3.  The return ends the function, the value cannot be null.
 
-*/
 
-checkPalindrome('Borscht');
+//  checkPalindrome('Borscht');
 
 function checkPalindrome(str) {
     let upperStr = str.toUpperCase();
@@ -23,3 +22,23 @@ function checkPalindrome(str) {
         };
     };
 };
+
+function sumDigits(num) {
+    let str = num.toString();
+    const arr = str.split(' ');
+    let total = 0;
+    console.log(arr);
+    for(i = 0; i < arr.length; i++) {
+        total += arr[i];
+        console.log(total, arr[i], i)
+    }
+    return total;
+}
+
+function calculateSide(sideA, sideB) {
+    let sideC = ((sideA * sideA) + (sideB * sideB));
+    let hypo = Math.sqrt(sideC);
+    return hypo;
+}
+
+*/

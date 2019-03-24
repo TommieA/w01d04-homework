@@ -6,6 +6,8 @@
     3.  The return ends the function, the value cannot be null.
 
 
+2.
+
 //  checkPalindrome('Borscht');
 
 function checkPalindrome(str) {
@@ -23,6 +25,8 @@ function checkPalindrome(str) {
     };
 };
 
+3.
+
 function sumDigits(num) {
     let str = num.toString();
     const arr = str.split(' ');
@@ -30,15 +34,52 @@ function sumDigits(num) {
     console.log(arr);
     for(i = 0; i < arr.length; i++) {
         total += arr[i];
-        console.log(total, arr[i], i)
-    }
+        console.log(total, arr[i], i);
+    };
     return total;
-}
+};
+
+4.
 
 function calculateSide(sideA, sideB) {
     let sideC = ((sideA * sideA) + (sideB * sideB));
     let hypo = Math.sqrt(sideC);
     return hypo;
-}
+};
+
+5.
+
+function sumArray([arr]) {
+    let total = 0;
+    for(let i = 0; i < arr.length; i++) {
+        total += arr[i];
+    };
+    return total;
+};
+
+6.
+
+function checkPrime(num) {
+    for(i = 2; i < num; i++) {
+        if (num % i === 0) {
+            return false;
+        }; 
+    };
+    return true;
+};
+
+function printPrimes(num) {
+    let primes = [];
+    for(let i = 2; i < num; i++) {
+        for(let k = 2; k < i; k++) {
+            if (i % k === 0) {
+            primes.push(i);
+            };
+        }; 
+    };
+    for (let x = 1; x < primes.length; x++) {
+        console.log(primes[x]);
+    };
+};
 
 */

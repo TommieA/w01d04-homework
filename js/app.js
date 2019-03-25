@@ -68,18 +68,31 @@ function checkPrime(num) {
     return true;
 };
 
+*/
+
 function printPrimes(num) {
     let primes = [];
     for(let i = 2; i < num; i++) {
+        let pYes = false;
+        let pNo = false;
+        if(i === 2){
+            pYes = true;
+        };
         for(let k = 2; k < i; k++) {
-            if (i % k === 0) {
-            primes.push(i);
+            if (i % k !== 0) {
+                pYes = true;
+            } else {
+                pNo = true;
             };
         }; 
+        if(pYes && pNo === false){
+              primes.push(i);
+        };
     };
     for (let x = 1; x < primes.length; x++) {
         console.log(primes[x]);
     };
 };
 
-*/
+printPrimes(20);
+

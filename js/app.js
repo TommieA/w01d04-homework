@@ -26,19 +26,22 @@ function checkPalindrome(str) {
 };
 
 3.
+*/
 
 function sumDigits(num) {
     let str = num.toString();
-    const arr = str.split(' ');
+    const arr = str.split('');
     let total = 0;
     console.log(arr);
     for(i = 0; i < arr.length; i++) {
-        total += arr[i];
-        console.log(total, arr[i], i);
+        total += Number(arr[i]);
     };
     return total;
 };
 
+sumDigits(42);
+
+/*
 4.
 
 function calculateSide(sideA, sideB) {
@@ -68,8 +71,6 @@ function checkPrime(num) {
     return true;
 };
 
-*/
-
 function printPrimes(num) {
     let primes = [];
     for(let i = 2; i < num; i++) {
@@ -96,3 +97,4 @@ function printPrimes(num) {
 
 printPrimes(20);
 
+*/
